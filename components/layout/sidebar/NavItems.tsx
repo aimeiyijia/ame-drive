@@ -1,9 +1,9 @@
 import { ReactText } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import {
   Box,
   Flex,
-  Link,
   useColorModeValue,
   FlexProps, Text,
 } from '@chakra-ui/react'
@@ -34,7 +34,7 @@ const NavItem = ({ iconName, routeName, children, ...rest }: NavItemProps) => {
   const router = useRouter()
   const bg = useColorModeValue('blue.200', 'rgba(132,133,141,0.24)')
   return (
-    <Link href={'/' + routeName} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link href={'/' + routeName} style={{ textDecoration: 'none' }}>
       <Flex
         w="216px"
         alignItems="center"
