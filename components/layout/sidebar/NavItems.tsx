@@ -34,7 +34,7 @@ const NavItem = ({ iconName, routeName, children, ...rest }: NavItemProps) => {
   const router = useRouter()
   const bg = useColorModeValue('blue.200', 'rgba(132,133,141,0.24)')
   return (
-    <Link href={'/' + routeName} style={{ textDecoration: 'none' }}>
+    <Link href={'/' + routeName} style={{ textDecoration: 'none' }} passHref>
       <Flex
         w="216px"
         alignItems="center"
